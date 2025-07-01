@@ -1,10 +1,12 @@
 import "./style.css";
 
-import { MainPage } from "./rlib/timeline/t2025/june/domain-ops/Logger";
+import { MainPageController } from "./rlib/timeline/t2025/june/domain-ops/Logger";
 //
 // import { Home } from "./rlib/timeline/t2025/april/DomainOps/Home";
 // const page = new Home();
 // const page = NewDesign();
-const page = MainPage();
+const page = MainPageController();
 
-document.querySelector<HTMLDivElement>("#app")?.appendChild(page.getElement());
+document
+    .querySelector<HTMLDivElement>("#app")
+    ?.appendChild(page.comp.getElement());
